@@ -3,25 +3,25 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'home_page_model.dart';
-export 'home_page_model.dart';
+import 'home_page_copy_model.dart';
+export 'home_page_copy_model.dart';
 
-class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({super.key});
+class HomePageCopyWidget extends StatefulWidget {
+  const HomePageCopyWidget({super.key});
 
   @override
-  State<HomePageWidget> createState() => _HomePageWidgetState();
+  State<HomePageCopyWidget> createState() => _HomePageCopyWidgetState();
 }
 
-class _HomePageWidgetState extends State<HomePageWidget> {
-  late HomePageModel _model;
+class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
+  late HomePageCopyModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => HomePageModel());
+    _model = createModel(context, () => HomePageCopyModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -65,44 +65,43 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               children: [
                 Flexible(
                   flex: 40,
-                  child: Align(
-                    alignment: const AlignmentDirectional(0.1, 0.0),
-                    child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
-                          16.0, 16.0, 16.0, 16.0),
-                      child: InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            PageTransition(
-                              type: PageTransitionType.fade,
-                              child: FlutterFlowExpandedImageView(
-                                image: Image.network(
-                                  'https://img.artpal.com/610392/3-23-9-20-8-49-2m.jpg',
-                                  fit: BoxFit.contain,
-                                ),
-                                allowRotation: false,
-                                tag: 'ironman',
-                                useHeroAnimation: true,
+                  child: Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+                    child: InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          PageTransition(
+                            type: PageTransitionType.fade,
+                            child: FlutterFlowExpandedImageView(
+                              image: Image.network(
+                                'https://i.ytimg.com/vi/3AFNF5NmunI/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-BIAC4AOKAgwIABABGEwgVihlMA8=&rs=AOn4CLDOTezBvSfY2vwKia78-4tB9RFIJg',
+                                fit: BoxFit.contain,
+                                alignment: const Alignment(10.0, 0.1),
                               ),
+                              allowRotation: false,
+                              tag: 'thor',
+                              useHeroAnimation: true,
                             ),
-                          );
-                        },
-                        child: Hero(
-                          tag: 'ironman',
-                          transitionOnUserGestures: true,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(12.0),
-                            child: Image.network(
-                              'https://img.artpal.com/610392/3-23-9-20-8-49-2m.jpg',
-                              width: MediaQuery.sizeOf(context).width * 0.721,
-                              height: 230.0,
-                              fit: BoxFit.fill,
-                            ),
+                          ),
+                        );
+                      },
+                      child: Hero(
+                        tag: 'thor',
+                        transitionOnUserGestures: true,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(12.0),
+                          child: Image.network(
+                            'https://i.ytimg.com/vi/3AFNF5NmunI/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-BIAC4AOKAgwIABABGEwgVihlMA8=&rs=AOn4CLDOTezBvSfY2vwKia78-4tB9RFIJg',
+                            width: MediaQuery.sizeOf(context).width * 0.918,
+                            height: 230.0,
+                            fit: BoxFit.cover,
+                            alignment: const Alignment(10.0, 0.1),
                           ),
                         ),
                       ),
@@ -115,8 +114,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     padding:
                         const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 24.0),
                     child: FFButtonWidget(
-                      onPressed: () async {
-                        context.pushNamed('HomePageCopy');
+                      onPressed: () {
+                        print('ButtonPrimary pressed ...');
                       },
                       text: 'A caballito',
                       options: FFButtonOptions(
